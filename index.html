@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gifthealth Vendor Health</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #FFFFFF;
+      font-family: "Funnel Display", "Inter", system-ui, sans-serif;
+      color: #440B39;
+      overflow: hidden;
+    }
+    .banner {
+      position: relative;
+      height: 100%;
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      padding-left: 28px;
+      box-sizing: border-box;
+    }
+    .swoosh {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 38%;
+      height: 100%;
+      background: linear-gradient(135deg, #DC5AEE 0%, #440B39 100%);
+      clip-path: ellipse(100% 105% at 100% 0%);
+    }
+    .brand {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand img {
+      height: 48px;
+      display: block;
+    }
+    .divider {
+      width: 2px;
+      height: 48px;
+      background: linear-gradient(180deg, #DC5AEE, #FF764D);
+    }
+    .title {
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 14px;
+      font-weight: 300;
+      margin: 4px 0 0;
+    }
+    .tag {
+      position: absolute;
+      z-index: 1;
+      right: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="swoosh"></div>
+    <div class="brand">
+      <img src="logo.svg" alt="Gifthealth logo">
+      <div class="divider"></div>
+      <div>
+        <h1 class="title">Vendor Health</h1>
+        <p class="subtitle">On-time delivery, fill rate, and spend concentration</p>
+      </div>
+    </div>
+    <div class="tag">Supply Chain</div>
+  </div>
+</body>
+</html>
