@@ -3,90 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gifthealth Vendor Health</title>
+  <title>SK life science</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap" rel="stylesheet">
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       background: #FFFFFF;
-      font-family: "Funnel Display", "Inter", system-ui, sans-serif;
-      color: #440B39;
       overflow: hidden;
     }
     .banner {
       position: relative;
       height: 100%;
-      min-height: 110px;
+      min-height: 140px;
       display: flex;
       align-items: center;
-      padding-left: 28px;
       box-sizing: border-box;
+      padding-left: 48px;
     }
+    /* Left edge strip: red cap, orange body */
+    .strip {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10px;
+      height: 100%;
+      background: linear-gradient(180deg, #E4002B 0, #E4002B 14px, #F57C00 14px, #F57C00 100%);
+    }
+    /* Right side curved swoosh */
     .swoosh {
       position: absolute;
-      top: 0;
       right: 0;
-      width: 38%;
+      top: 0;
+      width: 270px;
       height: 100%;
-      background: linear-gradient(135deg, #DC5AEE 0%, #440B39 100%);
-      clip-path: ellipse(100% 105% at 100% 0%);
-    }
-    .brand {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .brand img {
-      height: 48px;
       display: block;
     }
-    .divider {
-      width: 2px;
-      height: 48px;
-      background: linear-gradient(180deg, #DC5AEE, #FF764D);
-    }
-    .title {
-      font-size: 30px;
-      font-weight: 800;
-      line-height: 1.1;
-      margin: 0;
-    }
-    .subtitle {
-      font-size: 14px;
-      font-weight: 300;
-      margin: 4px 0 0;
-    }
-    .tag {
+    /* Soft shadow along the bottom edge */
+    .shadow {
       position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 14px;
+      background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.22));
+      pointer-events: none;
+    }
+    .logo {
+      position: relative;
       z-index: 1;
-      right: 28px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #FFFFFF;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      height: 110px;
+      width: auto;
+      display: block;
+    }
+    @media (max-width: 560px) {
+      .swoosh { width: 140px; }
+      .logo { height: 80px; }
+      .banner { padding-left: 28px; }
     }
   </style>
 </head>
 <body>
   <div class="banner">
-    <div class="swoosh"></div>
-    <div class="brand">
-      <img src="logo.svg" alt="Gifthealth logo">
-      <div class="divider"></div>
-      <div>
-        <h1 class="title">Vendor Health</h1>
-        <p class="subtitle">On-time delivery, fill rate, and spend concentration</p>
-      </div>
-    </div>
-    <div class="tag">Supply Chain</div>
+    <div class="strip"></div>
+
+    <svg class="swoosh" viewBox="0 0 270 284" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="swooshGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#F57C00"/>
+          <stop offset="0.55" stop-color="#E8520A"/>
+          <stop offset="1" stop-color="#D41E0A"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,0 C50,5 90,40 100,100 C108,150 110,200 125,284 L270,284 L270,0 Z" fill="url(#swooshGrad)"/>
+    </svg>
+
+    <svg class="logo" viewBox="0 0 350 130" role="img" aria-label="SK life science logo">
+      <!-- Butterfly mark -->
+      <g stroke-linejoin="round" stroke-width="3">
+        <path d="M53,12 L90,34 L70,60 Z" fill="#F57C00" stroke="#F57C00"/>
+        <path d="M92,30 L112,40 L106,62 L94,50 Z" fill="#E4002B" stroke="#E4002B"/>
+        <path d="M112,40 L132,32 L128,54 L108,62 Z" fill="#E4002B" stroke="#E4002B"/>
+        <path d="M118,58 L142,56 L128,68 Z" fill="#F57C00" stroke="#F57C00"/>
+      </g>
+      <!-- Wordmark -->
+      <text x="2" y="118" font-family="Nunito, 'Arial Rounded MT Bold', Arial, sans-serif"
+            font-size="62" font-weight="900" fill="#E4002B">SK</text>
+      <text x="104" y="117" font-family="Nunito, 'Arial Rounded MT Bold', Arial, sans-serif"
+            font-size="40" font-weight="700" fill="#F68B1F"
+            textLength="240" lengthAdjust="spacingAndGlyphs">life science</text>
+    </svg>
+
+    <div class="shadow"></div>
   </div>
 </body>
 </html>
